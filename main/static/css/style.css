@@ -1,0 +1,960 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'MoskE';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Extra-Light 200'), url('fonts/Mosk Extra-Light 200.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Thin 100';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Thin 100'), url('fonts/Mosk Thin 100.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Light 300';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Light 300'), url('fonts/Mosk Light 300.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MoskMedium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Medium 500'), url('fonts/Mosk Medium 500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MoskBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Semi-Bold 600'), url('fonts/Mosk Semi-Bold 600.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk_s_Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Bold 700'), url('fonts/Mosk Bold 700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Extra-Bold 800';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Extra-Bold 800'), url('fonts/Mosk Extra-Bold 800.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Ultra-Bold 900';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Ultra-Bold 900'), url('fonts/Mosk Ultra-Bold 900.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Normal 400 Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Normal 400 Regular'), url('fonts/Mosk Normal 400.woff') format('woff');
+}
+
+body {
+    background-color: #141517;
+    font-family: MoskBold;
+}
+
+#preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100vh;
+      line-height: 100vh;
+      text-align:center;
+      overflow-y: hidden;
+      background-color:#141517;
+      text-transform: uppercase;
+      color:white;
+}
+    
+.visible {
+  visibility: visible;
+  opacity: 1;
+  overflow-y: hidden;
+  transition: opacity 2s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.no_scroll{
+    overflow-y: hidden;
+}
+
+header.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+header>.left-sec {
+    width: 60%;
+    height: 90%;
+    box-sizing: border-box;
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+header>.right-sec {
+    width: 40%;
+    height: 90%;
+    box-sizing: border-box;
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+.heading_main{
+    width:80%;
+    height:50vh;
+    color:black;
+    font-size:3vw;
+    text-align:left;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: MoskBold;
+    margin-top:22.5%;
+    padding-top: 12.5%;
+}
+img.macbook{
+    width:80%;
+    margin-top:7.5%;
+    position: absolute;
+    right:0;
+}
+
+.bottom_sec{
+    width:100%;
+    height:10vh;
+    line-height: 10vh;
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bottom_sec > a{
+    color:black;
+    vertical-align: middle;
+    font-size:1.5vw;
+    text-decoration: none;
+}
+
+nav.navigation {
+    width: 100%;
+    height: 10vh;
+    line-height: 10vh;
+    box-sizing: border-box;
+    z-index:20;
+    position: fixed;
+    transition:0.15s;
+    display:flex;
+}
+
+.scrolling{
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);   
+    transition:0.15s;
+}
+
+.normal{
+    position: relative;
+    background-color: white;
+    transition: 0.3s;
+}
+.sticked{
+    position:fixed;
+    transition: 0.3s;
+    top: 0;
+    background-color: red;
+}
+nav .logo{
+    float:left;
+    width: 30%;
+    margin-left: 2.5%;
+}
+nav > .logo > a {
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    font-family: Mosk_s_Bold;
+    text-decoration: none;
+    width:auto;
+    height:100%;
+    color: black;
+}
+
+ul.main_menu{
+    color:black;
+    list-style: none;
+    float:left;
+    height:10vh;
+    width:67.5%;
+    text-align:right;
+}
+ul.main_menu > li{
+    display: inline-block;
+    margin-left:2%;
+    margin-right:2%;
+    vertical-align:middle;
+}
+ul.main_menu > li > a{
+    font-size:1.5vw;
+    text-transform: uppercase;
+    font-family:MoskBold;
+    text-decoration: none;
+    color:black;
+    transition:0.3s;
+    opacity: 0.8;
+}
+ul.main_menu > li > a:hover{
+    font-size:1.5vw;
+    transition:0.3s;
+}
+
+ul.main_menu > li > a > button{
+    font-size: 1.5vw;
+    height: 10vh;
+    border:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color:white;
+    width:10em;
+    cursor: pointer;
+    background-color: #6CD030;
+    transition:0.2;
+}
+ul.main_menu > li > a > button:hover{
+    transition:0.2;
+}
+ul.main_menu > li.download_el{
+    height:100%;
+    margin-right:0;
+}
+ul.main_menu > li.account_el{
+    margin-right:2%;
+}
+article.content{
+    width:100%;
+    height:auto;
+    box-sizing:border-box;
+    position: relative;
+}
+
+.project_one{
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+    position: relative;
+    line-height:100vh;
+    text-align:center;
+    background-image: url(../img/jpg/conifer-dawn-daylight-167698.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+h2.p_h{
+    color:white;
+    font-size: 2vw;
+    vertical-align: middle;
+    font-family: MoskBold;
+}
+.project_two{
+    width:100%;
+    height:25vh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    font-family: MoskBold;
+    text-transform: uppercase;
+    margin-top:2%;
+
+}
+.project_two > .info{
+    width:20%;
+    height:100%;
+    border-radius: 10px;
+    box-sizing:border-box;
+    float:left;
+    transition:0.3s;
+}
+.project_two > .info > img{
+    width:27.5%;
+}
+.project_two > .info > h2{
+    margin-top:5%;
+    font-size:1vw;
+}
+.project_three{
+    width:100%;
+    height:auto;
+    position: relative;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: MoskMedium;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+
+.left_pos >h2{
+    text-align: right;
+}
+.left_pos >p{
+    width:70%;
+    float:right;
+    text-align: right;
+}
+.right_pos >h2{
+    text-align: left;
+}
+.right_pos >p{
+    width:70%;
+    float:left;
+    text-align: left;
+}
+.img_lab{
+    width:50%;
+    height:100%;
+    box-sizing: border-box;
+    float:left;
+    line-height: 60vh;
+    text-align: center;
+}
+.img_lab > img{
+    width:25%;
+    vertical-align: middle;
+}
+.text_lab{
+    width:50%;
+    height:100%;
+    box-sizing: border-box;
+    float:left;
+}
+
+.text_lab > h2{
+    margin-top:12.5%;
+    font-size:2vw;
+}
+.text_lab > p{
+    margin-top:2%;
+    font-size:1.25vw;
+    text-transform:none;
+}
+.work_one{
+    width:100%;
+    height:60vh;
+    align-self:center;
+    background-color: #141517;
+    color:white;
+}
+
+
+
+.work_two{
+    width:100%;
+    height:60vh;
+    align-self:center;
+}
+.work_three{
+    width:100%;
+    height:60vh;
+    align-self:center;
+    background-color: white;
+    color:black;
+}
+
+.work_four{
+    width:100%;
+    height:60vh;
+    align-self:center;
+    background-color: white;
+    color:black;
+}
+.work_five{
+    width:100%;
+    height:60vh;
+    align-self:center;
+    background-color: white;
+    color:black;
+}
+
+.team{
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+    background-color:#141517;
+    text-transform: uppercase;
+}
+.team >.left{
+    width:50%;
+    height:100%;
+    line-height: 100vh;
+    text-align: center;
+    float:left;
+    box-sizing: border-box;
+    color:white;
+    background-image:url(../img/jpg/forest.jpg);
+    background-size:100%;
+
+}
+.team > .left{
+    font-size: 2vw;
+    vertical-align: middle;
+}
+.team > .right{
+    width:50%;
+    height:100%;
+    float:left;
+    padding-top:15%;
+    padding-left:6%;
+    box-sizing: border-box;
+}
+.mate{
+    width:30%;
+    height:30%;
+    float:left;
+    box-sizing: border-box;
+    background-image:url("../img/jpg/placeholder.jpg");
+    background-size:100%;
+}
+
+.mate_info{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding-top: 15%;
+    text-align: center;
+    color:white;
+    background: black;
+    opacity: 0;
+    transition: 0.3s;
+}
+.mate_info > h2{
+    font-size:1.5vw;
+}
+.make_info > p{
+    font-size:1vw;
+}
+.mate:hover .mate_info{
+    opacity:0.7;
+    transition: 0.3s;
+}
+.download{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background-color: white;
+    box-sizing:border-box;
+}
+.download_btn{
+    background-color:#141517;
+    color:white;
+    border:1px solid #141517;
+    width:60%;
+    height:12vh;
+    cursor: pointer;
+    margin-top:9%;
+}
+.download_btn > .left{
+    width:30%;
+    height:100%;
+    line-height: 12vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+}
+.download > .top{
+    width:100%;
+    height:25vh;
+    float:left;
+    line-height: 25vh;
+    position: relative;
+    box-sizing: border-box;
+}
+.download > .top > h2{
+    text-align:center;
+    box-sizing:border-box;
+    font-size:2.5vw;
+    text-transform:uppercase;
+    position: relative;
+}
+
+.download > .bottom{
+    width:100%;
+    height:75vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.windows{
+    width:30%;
+    height:60vh;
+    text-align: center;
+    margin-top:5%;
+}
+.windows > img{
+    width:30%;
+    margin-left:35%;
+    display: block; 
+}
+.linux{
+    width:30%;
+    height:60vh;
+    text-align: center;
+    margin-top:5%;
+}
+.linux > img{
+    width:30%;
+    margin-left:35%;
+    display: block; 
+}
+}
+
+.download_btn{
+    background-color:#141517;
+    color:white;
+    border:1px solid #141517;
+    width:60%;
+    height:12vh;
+    cursor: pointer;
+    margin-top:9%;
+}
+.download_btn > .left{
+    width:30%;
+    height:100%;
+    line-height: 12vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+}
+.download_btn > .left > img{
+    width: 50%;
+    vertical-align: middle;
+
+}
+.download_btn > .right{
+    width:70%;
+    height:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+}
+.download_btn > .right > h2{
+    margin-top:10%;
+    font-size:1.5vw;
+}
+.download_btn > .right > p{
+    margin-top:2%;
+    font-size:1vw;
+}
+footer.footer{
+    width:100%;
+    height: auto;
+    text-transform: uppercase;
+
+}
+footer > .top{
+    width:100%;
+    height:10vh;
+    box-sizing:border-box;
+    line-height: 10vh;
+}
+footer > .bottom{
+    width:100%;
+    height:5vh;
+    box-sizing:border-box;
+    line-height: 5vh;
+    text-align: center;
+}
+footer > .bottom > p{
+   color:white;
+    font-size: 1.25vw;
+}
+ul.footer-menu{
+    list-style: none;
+    text-align: center;
+}
+ul.footer-menu > li{
+    display:inline-block;
+    margin-left:1%;
+    margin-right:1%;
+}
+ul.footer-menu > li > a{
+    color:white;
+    font-size: 1.5vw;
+    text-decoration:none;
+}
+
+
+
+
+
+/*NEWS PAGE*/
+.news{
+    width:100%;
+    padding-top:10vh;
+    height:auto;
+    position: relative;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.post{
+    width:50%;
+    height:50vh;
+    border-radius:10px;
+    color:white;
+    margin-top:2%;
+    background-color:#141517;
+    box-sizing:border-box;
+}
+.post:last-child{
+    margin-bottom:2%;
+}
+.post h2{
+    font-size: 2vw;
+}
+.post .left{
+    width:50%;
+    height:50vh;
+    float:left;
+    line-height:50vh;
+    text-align:center;
+    box-sizing: border-box;
+}
+.post .left h2{
+    vertical-align: middle;
+}
+.post .right{
+    width:50%;
+    height:40vh;
+    float:left;
+    box-sizing: border-box;
+}
+.post .right p{
+    margin-top:30%;
+    font-size:1vw;
+    width:90%;
+}
+.post .bottom{
+    width:50%;
+    height:10vh;
+    line-height:10vh;
+    float:left;
+    text-align:right;
+    box-sizing: border-box;
+    padding-right:5%;
+}
+.post .bottom p{
+    font-size: 1vw;
+    vertical-align:middle;
+}
+
+
+.updates{
+    width:90%;
+    margin-left:10%;
+    padding-top: 12.5vh;
+}
+.block_updates{
+    width:30%;
+    height:auto;
+    padding:1em;
+    border-radius:10px;
+    border:2px solid white;
+    color:white;
+    background-color:#141517;
+    box-sizing: border-box;
+    float:left;
+}
+.block_updates h2{
+    font-size:2vw;
+    margin-top:1%;
+    margin-bottom:1%;
+}
+.block_updates p{
+    font-size:1vw;
+}
+
+.block_account{
+    width:100%;
+    height:90vh;
+    position:absolute;
+    bottom:0;
+    box-sizing: border-box;
+    text-align:center;
+}
+.block_account h2{
+    font-size: 3vw;
+    margin-top:15%;
+}
+.block_account p{
+    font-size: 1.5vw;
+    margin-top:1%;
+}
+.block_account p > a{
+    color:black;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    nav {
+        border-bottom:1px solid #141517;
+    }
+    nav > .logo{
+        width:auto;
+    }
+    nav > .logo > a {
+        font-size:5vw;
+    }
+    ul.main_menu{
+        box-sizing:border-box;
+    }
+    ul.main_menu > li > a{
+    font-size:3vw;
+}
+
+    ul.main_menu > li > a > button{
+        display:none;
+    }
+    .scrolling{
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;   
+    transition:0.15s;
+}
+
+
+    header>.left-sec {
+        width: 100%;
+        height: 55%;
+        box-sizing: border-box;
+        position: relative;
+        float:left;
+    }
+
+    header>.right-sec {
+        width: 100%;
+        height: 35%;
+        box-sizing: border-box;
+        position: relative;
+        float:left;
+    }
+    .heading_main{
+        width:100%;
+        height:100%;
+        color:black;
+        font-size:5vw;
+        text-align:center;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        font-family: MoskBold;
+        margin-top:0%;
+        padding-top: 0%;
+    }
+    img.macbook{
+        width:80%;
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+    }
+    .bottom_sec > a{
+        font-size:4.5vw;
+    }
+
+
+
+    .project_one{
+        background-size:cover;
+    }
+    .project_one > h2{
+        font-size:8vw;
+    }
+    .project_two > .info > img{
+        width:57.5%;
+        margin-top:55%;
+    }
+    .project_two > .info > h2{
+        font-size:4vw;
+    }
+    .left_pos >p{
+        width:auto;
+    }
+    .right_pos >p{
+        width:auto;
+    }
+    .img_lab > img{
+        width:55%;
+        vertical-align: middle;
+    }
+    .text_lab{
+        width:50%;
+        height:100%;
+        box-sizing: border-box;
+        float:left;
+    }
+
+    .text_lab > h2{
+        margin-top:60%;
+        font-size:4.5vw;
+    }
+    .text_lab > p{
+        margin-top:2%;
+        font-size:3.25vw;
+    }
+
+
+    .team >.left{
+        background-size:cover;
+        font-size: 5vw;
+        vertical-align: middle;
+        width:100%;
+        height:50vh;
+        line-height:50vh;
+    }
+    .team > .right{
+        width:100%;
+        height:50vh;
+        padding-top:0%;
+        padding-left:0%;
+        box-sizing: border-box;
+    }
+    .mate{
+        width:50%;
+        height:35%;
+        float:left;
+        box-sizing: border-box;
+        background-image:url("../img/jpg/placeholder.jpg");
+        background-size:cover;
+        background-position: center;
+    }
+    .mate:last-child{
+        margin-left:25%;
+    }
+    .mate_info > h2{
+        font-size:4vw;
+    }
+    .make_info > p{
+        font-size:3vw;
+    }
+
+    .download{
+        height:120vh;
+    }
+    .download > .top > h2{
+        font-size:4.5vw;
+    }
+
+
+    .download > .bottom{
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+
+    }
+
+
+
+.windows{
+    width:100%;
+    height:30vh;
+
+}
+.windows > img{
+    width:20%;
+    margin-left:40%; 
+}
+.linux{
+    width:100%;
+    height:30vh;
+}
+.linux > img{
+    width:20%;
+    margin-left:40%;
+}
+.download_btn{
+    background-color:#141517;
+    color:white;
+    border:1px solid #141517;
+    width:60%;
+    height:12vh;
+    cursor: pointer;
+    margin-top:9%;
+}
+.download_btn > .left{
+    width:30%;
+    height:100%;
+    line-height: 12vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+}
+.download_btn > .right > h2{
+    font-size:4.5vw;
+}
+.download_btn > .right > p{
+    font-size:3vw;
+}
+
+
+
+footer > .bottom > p{
+   color:white;
+    font-size: 3.25vw;
+}
+ul.footer-menu{
+    list-style: none;
+    text-align: center;
+}
+ul.footer-menu > li{
+    display:inline-block;
+    margin-left:1%;
+    margin-right:1%;
+}
+ul.footer-menu > li > a{
+    color:white;
+    font-size: 4vw;
+    text-decoration:none;
+}
+
+}
+

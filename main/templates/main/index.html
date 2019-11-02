@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<!DOCTYPE html>
+	<title>Clover.Drone</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<meta content="ie=edge" http-equiv="X-US-Compatible">
+</head>
+<body>
+	<!--<div class="preloader" id="preloader"><h2>Clover.Dev</h2></div>-->
+		<header class="header">
+     <nav class="navigation normal" id="navbar">
+            <div class="logo">
+                <a href="">Clover.Drone</a>
+            </div>
+            <ul class="main_menu">
+                <li>
+                    <a href="">Docs</a>
+                </li>
+                <li>
+                    <a href="/updates/">Updates</a>
+                </li>
+                <li>
+                    <a href="/news/">News</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="/accounts/user/">Account</a>
+                </li>
+                <li>
+                    <a href="/accounts/logout">Logout</a>
+                </li>
+                {% else %}
+                <li><a href="/accounts/login">Login</a></li>
+                {% endif %}
+                <li class="download_el">
+                    <a href="/download/"><button>Download</button></a>
+                </li>
+            </ul>
+        </nav>
+		<div class="left-sec"><img alt="" class="macbook" src="{% static 'img/png/macbook.jpg'%}"></div>
+		<div class="right-sec">
+			<div class="heading_main">
+				<h2>Be</h2>
+				<h2>Smart</h2>
+			</div>
+		</div>
+		<div class="bottom_sec" id="bottom_sec">
+			<a href="#bottom_sec">Scroll down</a>
+		</div>
+	</header>
+	<article class="content" id="article">
+		<div class="project_two">
+			<div class="info">
+				<img alt="" src="{% static 'img/png/security-on.png'%}">
+				<h2>Secure</h2>
+			</div>
+			<div class="info">
+				<img alt="" src="{% static 'img/png/speed.png'%}">
+				<h2>Fast</h2>
+			</div>
+			<div class="info">
+				<img alt="" src="{% static 'img/png/hearts.png' %}">
+				<h2>User-friendly</h2>
+			</div>
+			<div class="info">
+				<img alt="" src="{% static 'img/png/cross.png'%}">
+				<h2>Cross Planform</h2>
+			</div>
+		</div>
+		<div class="project_one" id="project">
+		<h2 class="p_h">The best choice.</h2><img alt="" src=""></div>
+		<div class="project_three">
+			<div class="work_one">
+				<div class="img_lab"><img alt="" src="{% static 'img/png/navigation.png' %}"></div>
+				<div class="text_lab right_pos">
+					<h2>Create rout for drone flight</h2>
+					<p>This option allows you to calculate distance and amount of photos drone needs to take to cover all territory you marked. After program calculates all needed resources you will be able to see the optimal rout.  If you satisfied with result you have an opportunity to download rout with coordinates or you can upload this rout to drone.</p>
+				</div>
+			</div>
+			<div class="work_two">
+				<div class="text_lab left_pos">
+					<h2>Make best focused photo</h2>
+					<p>This option allows you to create well focused photo of some object or place. If for some reason photos of that object are unfocused in some places - just upload all of them and this program will create best focused photo out of those you uploaded.  If you satisfied with result you have an opportunity to download result.</p>
+				</div>
+				<div class="img_lab"><img alt="" src="{% static 'img/png/lens.png'%}"></div>
+			</div>
+			<div class="work_three">
+				<div class="img_lab"><img alt="" src="{% static 'img/png/map.png'%}"></div>
+				<div class="text_lab right_pos">
+					<h2>Map</h2>
+					<p>This option is used to create maps from photos your drone took while flying on certain territories. In order to this option to work -  upload all photos your drone took to this program and algorithm will create a map.  If you satisfied with result you have an opportunity to download result.</p>
+				</div>
+			</div>
+            <div class="work_four">
+    			<div class="text_lab left_pos">
+    				<h2>Check field for watering</h2>
+    				<p>In order to check if certain field needs to be watered you just need to upload photos with fields and algorithm will check all fields and mark those which in need of water.  If you satisfied with result you have an opportunity to download result.</p>
+    			</div>
+    			<div class="img_lab"><img alt="" src="{% static 'img/png/radar.png' %}"></div>
+            </div>
+            <div class="work_five">
+    			<div class="img_lab"><img alt="" src="{% static 'img/png/compare.png' %}"></div>
+    			 	<div class="text_lab right_pos">
+    					<h2>Compare</h2>
+    					<p>After taking photos of the same object but in different period of time you want to see the difference between those photos. This option allows you to upload photos you want to compare and as a result you will have photos with marked difference. If you satisfied with result you have an opportunity to download result.</p>
+    			</div>
+            </div>
+		</div>
+		<div class="team" id="team">
+			<div class="left">
+				<h2>Clover.Dev</h2>
+			</div>
+			<div class="right">
+				<div class="mate" id="mate">
+					<div class="mate_info" id="mate_info">
+						<h2>Daniel Hrovinski</h2>
+						<p>Text</p>
+					</div>
+				</div>
+				<div class="mate" id="mate">
+					<div class="mate_info" id="mate_info">
+						<h2>Denys Fokashchuk</h2>
+						<p>Text</p>
+					</div>
+				</div>
+				<div class="mate" id="mate">
+					<div class="mate_info" id="mate_info">
+						<h2>Nodar Pylypyshak</h2>
+						<p>Text</p>
+					</div>
+				</div>
+				<div class="mate" id="mate">
+					<div class="mate_info" id="mate_info">
+						<h2>Denis Tvardvski</h2>
+						<p>Text</p>
+					</div>
+				</div>
+				<div class="mate" id="mate">
+					<div class="mate_info" id="mate_info">
+						<h2>Noname</h2>
+						<p>Text</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="download" id="download">
+			<div class="top">
+				<h2>Download Clover.Drone</h2>
+			</div>
+			<div class="bottom">
+				<div class="windows">
+					<img alt="" src="{% static 'img/png/windows.png'%}"> <button class="download_btn">
+					<div class="left"><img alt="" src="{% static 'img/png/download-arrow.png'%}"></div>
+					<div class="right">
+						<h2>Windows</h2>
+						<p>Windows 7, 8, 10</p>
+					</div></button>
+				</div>
+				<div class="linux">
+					<img alt="" src="{% static 'img/png/linux.png' %}"> <button class="download_btn">
+					<div class="left"><img alt="" src="{% static 'img/png/download-arrow.png'%}"></div>
+					<div class="right">
+						<h2>Linux</h2>
+						<p>Debian, Ubuntu</p>
+					</div></button>
+				</div>
+			</div>
+		</div>
+	</article>
+	<footer class="footer">
+		<div class="top">
+			<ul class="footer-menu">
+				<li>
+					<a href="">Instagram</a>
+				</li>
+				<li>
+					<a href="">Facebook</a>
+				</li>
+				<li>
+					<a href="">Telegram</a>
+				</li>
+				<li>
+					<a href="">Twitter</a>
+				</li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<p>&copy; Clover.Dev 2019</p>
+		</div>
+	</footer>
+	<script src="{% static 'js/jquery.js' %}">
+	</script> 
+	<script src="{% static 'js/script.js' %}">
+	</script> 
+	<script src="{% static 'js/preloader.js'%}">
+	</script>
+</body>
+
+</html>

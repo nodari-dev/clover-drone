@@ -1,0 +1,156 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+    font-family: 'MoskE';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Extra-Light 200'), url('fonts/Mosk Extra-Light 200.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Thin 100';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Thin 100'), url('fonts/Mosk Thin 100.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Light 300';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Light 300'), url('fonts/Mosk Light 300.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MoskMedium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Medium 500'), url('fonts/Mosk Medium 500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MoskBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Semi-Bold 600'), url('fonts/Mosk Semi-Bold 600.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk_s_Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Bold 700'), url('fonts/Mosk Bold 700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Extra-Bold 800';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Extra-Bold 800'), url('fonts/Mosk Extra-Bold 800.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Ultra-Bold 900';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Ultra-Bold 900'), url('fonts/Mosk Ultra-Bold 900.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mosk Normal 400 Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mosk Normal 400 Regular'), url('fonts/Mosk Normal 400.woff') format('woff');
+}
+
+body{
+	font-family:MoskBold;
+	text-transform:uppercase;
+}
+ul{
+	display: none;
+}
+
+#preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100vh;
+      line-height: 100vh;
+      text-align:center;
+      overflow-y: hidden;
+      background-color:#141517;
+      text-transform: uppercase;
+      color:white;
+}
+    
+.visible {
+  visibility: visible;
+  opacity: 1;
+  overflow-y: hidden;
+  transition: opacity 2s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+span.helptext{
+    display:none;
+}
+input{
+	border:1px solid black;
+	width:60%;
+	height:6vh;
+	font-size:1.5vw;
+	text-align:center;
+	margin-top:5%;
+	border-radius:10px;
+}
+label{
+	display:none;
+}
+button{
+	width:30%;
+	height:6vh;
+	border:1px solid black;
+	border-radius:10px;
+	font-family:MoskBold;
+	font-size:1.25vw;
+	background-color:#89D959;
+	cursor:pointer;
+	margin-top:5%;
+	margin-left:15%;
+	text-transform:uppercase;
+}
+
+
+header.header{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+header > .left{
+    width:50%;
+    height:100vh;
+    line-height:100vh;
+    float:left;
+    background-image:url("../img/jpg/forest.jpg");
+    background-size:cover;
+    border:1px solid red;
+    box-sizing:border-box;
+}
+header > .right{
+    width:50%;
+    height:100vh;
+    line-height:100vh;
+    float:left;
+    background-color: white;
+}

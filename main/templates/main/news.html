@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clover.News</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body{
+            background-color:white;
+        }
+    </style>
+</head>
+<body>
+        <div id="preloader"><h2>Clover.Dev</h2></div>
+     <nav class="navigation normal" id="navbar">
+            <div class="logo">
+                <a href="">Clover.Drone</a>
+            </div>
+            <ul class="main_menu">
+                <li>
+                    <a href="">Docs</a>
+                </li>
+                <li>
+                    <a href="/updates/">Updates</a>
+                </li>
+                <li>
+                    <a href="/news/">News</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="/accounts/user/">Account</a>
+                </li>
+                <li>
+                    <a href="/accounts/logout">Logout</a>
+                </li>
+                {% else %}
+                <li><a href="/accounts/login">Login</a></li>
+                {% endif %}
+                <li class="download_el">
+                    <a href="/download/"><button>Download</button></a>
+                </li>
+            </ul>
+        </nav>s
+
+    <article class="news" >
+        {% for news in clover %}
+            <div class="post">
+                <div class="left"><h2>{{ news.title_news }}</h2></div>
+                <div class="right"><p>{{ news.content_news|safe }}</p></div>
+                <div class="bottom"><p>{{ news.published_news }}</p></div>
+            </div>
+        {% endfor %}
+    </article>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/preloader.js' %}"></script>
+</body>
+</html>
